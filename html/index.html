@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fearx-notify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white antialiased">
+    <div id="notification-container" class="fixed top-5 right-5 z-50 flex flex-col items-end space-y-3"></div>
+    <div id="settings-modal" class="modal-backdrop">
+        <div class="modal-card">
+            <div class="flex items-center justify-between mb-2">
+                <h2 class="text-lg font-bold">Notify Settings</h2>
+                <button id="settings-close" class="px-2 py-1 bg-neutral-700 rounded">Close</button>
+            </div>
+            <div class="space-y-3">
+                <div>
+                    <p class="text-sm text-neutral-300">Red Gradient</p>
+                    <div class="flex items-center gap-4 mt-1">
+                        <label class="flex items-center gap-2"><input type="radio" name="grad" value="on" class="radio"> On</label>
+                        <label class="flex items-center gap-2"><input type="radio" name="grad" value="off" class="radio" checked> Off</label>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="settings-save" class="px-3 py-1.5 bg-red-600 rounded font-medium">Save</button>
+                    <button id="settings-cancel" class="px-3 py-1.5 bg-neutral-700 rounded">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
